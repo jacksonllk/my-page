@@ -4,7 +4,6 @@ const withMDX = require('@next/mdx')({
   });
 
 const nextConfig = {
-
     // Add MDX support for .mdx files
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 }
