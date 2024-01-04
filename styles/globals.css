@@ -73,8 +73,9 @@
   body {
     @apply bg-background text-foreground;
   }
-
-.fa {
-  font-size: 12px;
+.icon-container {
+  width: 50px; /* adjust as needed */
+  height: 50px; /* adjust as needed */
+  text-align: center;
 }
 }
