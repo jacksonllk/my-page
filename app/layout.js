@@ -1,12 +1,11 @@
-// components/layout.js
-import React from 'react';
-
-const Layout = ({ children }) => {
+export default function RootLayout({ children }) {
   return (
-    <div className="custom-layout">
-      {children} {/* This renders the specific content wrapped in this layout */}
-    </div>
-  );
-};
-
-export default Layout;
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <title>Portfolio & Blog Page</title>
+      </head>
+      <body>{children}</body>
+    </html>
+  )
+}

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faSquareXTwitter,
-  faFacebook,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -20,27 +20,52 @@ import {
 export default function Intro() {
   return (
     <div className="flex flex-col items-center">
-      <div className="flex flex-row justify-between w-auto max-w-[1000px]">
+      <div className="flex flex-row justify-between w-auto max-w-full">
         <div className="p-3">
           <Card className="w-full">
-            <div className="flex flex-row">
+            <div className="flex flex-col sm:flex-row">
               <div>
                 <CardHeader>
-                  <CardTitle>Hi, I&apos;m Jackson</CardTitle>
+                  <CardTitle>👋 Hi, I&apos;m Jackson</CardTitle>
                   <CardDescription></CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-row">
-                    <p>
-                      I picked up programming mid 2022 and have launched my first
-                      online business in October 2023. I run it as a solopreneur for
-                      now.
+                  <div className="flex flex-col">
+                    <p className="max-w-[300px]">
+                      One day
+                      mid 2022, I decided to pick up programming and
+                      self-learn it with Udemy online courses and YouTube. I
+                      met many helpful peers through Twitter who helped me along
+                      the way. I launched my first web app in October 2023, and
+                      have been building and continuing to learn ever since.
+                      Feel free to reach out!
                     </p>
+                    <p className="pt-5 font-semibold">Building:</p>
+                    <Link
+                      href="https://tenderpanel.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:underline"
+                    >
+                      🏗️ tenderpanel.com
+                    </Link>
                   </div>
                 </CardContent>
-                <CardFooter>
-                  <div className="flex flex-row items-center justify-end gap-x-3">
-                    <p>Find me here:</p>
+              </div>
+              <div className="p-3 flex items-center justify-center">
+                <div className="flex flex-col">
+                  <div className="relative max-w-[300px] h-auto rounded-md overflow-hidden">
+                    <Image
+                      src="/images/profile-pic.jpg"
+                      alt="Picture of the author"
+                      // Use standard CSS for sizing and object-fit
+                      className="object-cover" // Add appropriate CSS classes
+                      priority={true}
+                      width={300}
+                      height={300}
+                    />
+                  </div>
+                  <div className="flex flex-row items-center justify-end gap-x-2 mt-1">
                     <div className="icon-container">
                       <Link
                         href="https://twitter.com/jackson_llk"
@@ -59,34 +84,21 @@ export default function Intro() {
                         <FontAwesomeIcon icon={faLinkedin} />
                       </Link>
                     </div>
+                    <div className="icon-container">
+                      <Link
+                        href="https://github.com/jacksonllk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FontAwesomeIcon icon={faGithub} />
+                      </Link>
+                    </div>
                   </div>
-                </CardFooter>
+                </div>
               </div>
-              <div className="p-6 flex items-center">
-          <div className="relative w-full max-w-[200px] h-auto aspect-square rounded-md overflow-hidden sm:max-w-[300px]">
-            <Image
-              src="/images/profile-pic.jpg"
-              alt="Picture of the author"
-              layout="responsive"
-              width={300} // Max width for larger screens
-              height={300} // Ensure square aspect ratio
-              objectFit="cover"
-            />
-          </div>
-        </div>
             </div>
           </Card>
         </div>
-        {/* <div className="p-3">
-          <div className="relative w-[300px] h-[450px] rounded-md overflow-hidden">
-            <Image
-              src="/images/profile-pic-2.jpg"
-              alt="Picture of the author"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-        </div> */}
       </div>
     </div>
   );

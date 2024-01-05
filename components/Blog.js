@@ -1,13 +1,18 @@
-// src/app/components/Blog.js
-export default function Blog() {
+// components/Blog.js
+
+import MyFirstPost from '../app/my-mdx-page/my-first-post.mdx';
+
+const Blog = () => {
   return (
     <div>
-      <h2>Blog</h2>
       <article>
-        <h3>My First Blog Post</h3>
-        <p>This is the content of my first blog post...</p>
+        <h2>Title for Post One</h2>
+        <MyFirstPost />
       </article>
-      {/* Add more posts directly */}
+
+      {/* Add more posts similarly */}
     </div>
   );
-}
+};
+
+export default Blog;

@@ -73,9 +73,9 @@
   body {
     @apply bg-background text-foreground;
   }
+
 .icon-container {
-  width: 50px; /* adjust as needed */
-  height: 50px; /* adjust as needed */
+  width: 30px; /* adjust as needed */
   text-align: center;
 }
 }
