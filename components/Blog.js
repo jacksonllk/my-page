@@ -42,7 +42,7 @@ const Blog = () => {
             )}
             <CardHeader>
               <CardTitle className="m-0">
-                <Link href={post.slug} className="no-underline">
+                <Link href={`/posts/${post.slug}`} className="no-underline">
                   {post.title}
                 </Link>
               </CardTitle>

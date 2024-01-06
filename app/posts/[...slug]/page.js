@@ -1,93 +1,36 @@
-import { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
-import { notFound } from "next/navigation"
-import { allPosts } from "contentlayer/generated"
-import { format, parseISO } from "date-fns"
+import { compileMDX } from "next-mdx-remote/rsc";
+import path from "path";
+import { readFile, access } from "fs/promises";
+import { notFound } from "next/navigation";
 
-import { Mdx } from "@/components/mdx-components"
-import { SharePost } from "@/components/share-post"
+const POSTS_FOLDER = path.join(process.cwd(), "posts");
 
-function getPostFromParams(params) {
-  const slug = params?.slug?.join("/")
-  const post = allPosts.find((post) => post.slugAsParams === slug)
+async function readPostFile(slug) {
+  const filePath = path.resolve(path.join(POSTS_FOLDER, `${slug}.mdx`));
 
-  if (!post) {
-    return null
+  try {
+    await access(filePath);
+  } catch (err) {
+    return null;
   }
 
-  return post
-}
-
-export async function generateMetadata(params) {
-  const post = await getPostFromParams(params)
-
-  if (!post) {
-    return {}
-  }
-
-  return {
-    title: post.title,
-    description: post.description,
-  }
-}
-
-export async function generateStaticParams() {
-  return allPosts.map((post) => ({
-    slug: post.slugAsParams.split("/"),
-  }))
+  const fileContent = await readFile(filePath, { encoding: "utf8" });
+  return fileContent;
 }
 
 export default async function PostPage({ params }) {
-  const post = await getPostFromParams(params)
+  const markdown = await readPostFile(params.slug);
 
-  if (!post) {
-    notFound()
+  if (!markdown) {
+    notFound();
   }
 
-  return (
-    <article className="prose dark:prose-invert">
-      {post.image && (
-        <div className="relative mb-12 h-[345px] w-full">
-          <Image
-            className="m-0 w-full rounded-lg object-cover"
-            src={post.image}
-            alt={post.title}
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        </div>
-      )}
+  const { content, frontmatter } = await compileMDX({
+    source: markdown,
+    options: { parseFrontmatter: true },
+  });
 
-      <header>
-        <h1 className="mb-2">{post.title}</h1>
-        {post.description && (
-          <p className="mb-6 mt-0 text-xl text-gray-700 dark:text-gray-200">
-            {post.description}
-          </p>
-        )}
-        <p className="space-x-1 text-xs text-gray-500">
-          <span>{format(parseISO(post.date), "MMMM dd, yyyy")}</span>
-          <span>{` • `}</span>
-          <span>{post.readingTime.text}</span>
-          <span>{` • `}</span>
-          <span>
-            <Link
-              href={`/categories/${encodeURIComponent(
-                post.category.toLowerCase()
-              )}`}
-            >
-              {post.category}
-            </Link>
-          </span>
-        </p>
-      </header>
-      <hr className="my-6" />
-      <Mdx code={post.body.code} />
-      <div className="mt-12">
-        <SharePost title={post.title} slug={post.slug} />
-      </div>
-    </article>
-  )
+  // do something with frontmatter, like set metadata or whatever
+
+  return <>{content}</>;
 }
