@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Intro from "@/components/Intro";
-import Blog from "@/components/Blog";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,8 +22,7 @@ export default function RootLayout({ children }) {
         )}
       >
         <Intro />
-        <Blog />
-        <main>{children}</main>
+        <main className="">{children}</main>
       </body>
     </html>
   );

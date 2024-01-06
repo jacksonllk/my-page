@@ -1,3 +1,5 @@
+// app/posts/[...slug]/page.js
+
 import { compileMDX } from "next-mdx-remote/rsc";
 import path from "path";
 import { readFile, access } from "fs/promises";

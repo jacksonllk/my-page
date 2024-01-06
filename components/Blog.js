@@ -33,7 +33,7 @@ const Blog = () => {
   return (
     <div>
       {allPosts.map((post) => (
-        <article key={post.slug} className="mb-12">
+        <article key={post.slug} className="mb-3">
           <Card>
             {post.image && (
               <div className="relative h-60 w-full">
