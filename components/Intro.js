@@ -39,15 +39,6 @@ export default function Intro() {
                       been building and continuing to learn ever since. Feel
                       free to reach out!
                     </p>
-                    <p className="pt-5 font-semibold">Building:</p>
-                    <Link
-                      href="https://tenderpanel.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-500 hover:underline"
-                    >
-                      🏗️ tenderpanel.com
-                    </Link>
                   </div>
                 </CardContent>
               </div>
