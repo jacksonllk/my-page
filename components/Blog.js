@@ -1,26 +1,33 @@
 // components/Blog.js
-import Image from "next/image"
-import Link from "next/link"
-import { format, parseISO } from "date-fns"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import Image from "next/image";
+import Link from "next/link";
+import { format, parseISO } from "date-fns";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 // Read MDX files from the posts directory
-const postsDirectory = path.join(process.cwd(), 'posts')
-const filenames = fs.readdirSync(postsDirectory)
+const postsDirectory = path.join(process.cwd(), "posts");
+const filenames = fs.readdirSync(postsDirectory);
 
 // Get data from each MDX file
-const allPosts = filenames.map(filename => {
-  const filePath = path.join(postsDirectory, filename)
-  const fileContents = fs.readFileSync(filePath, 'utf8')
-  const { data } = matter(fileContents)
+const allPosts = filenames.map((filename) => {
+  const filePath = path.join(postsDirectory, filename);
+  const fileContents = fs.readFileSync(filePath, "utf8");
+  const { data } = matter(fileContents);
   return {
-    slug: filename.replace(/\.mdx$/, ''),
-    ...data
-  }
-})
+    slug: filename.replace(/\.mdx$/, ""),
+    ...data,
+  };
+});
 
 const Blog = () => {
   return (
@@ -42,27 +49,29 @@ const Blog = () => {
             )}
             <CardHeader>
               <CardTitle className="m-0">
-                <Link href={`/posts/${post.slug}`} className="no-underline">
+                <a href={`/posts/${post.slug}`} className="no-underline">
                   {post.title}
-                </Link>
+                </a>
               </CardTitle>
               <CardDescription className="space-x-1 text-xs">
                 <span>{format(parseISO(post.date), "MMMM dd, yyyy")}</span>
                 <span>{` • `}</span>
-                {post.categories && post.categories.map(category => (
-                  <span key={category}>
-                    <Link
-                      href={`/categories/${encodeURIComponent(category.toLowerCase())}`}
-                      className="underline underline-offset-2"
-                    >
-                      {category}
-                    </Link>
-                  </span>
-                ))}
+                {post.categories &&
+                  post.categories.map((category) => (
+                    <span key={category}>
+                      <Link
+                        href={`/categories/${encodeURIComponent(
+                          category.toLowerCase()
+                        )}`}
+                        className="underline underline-offset-2"
+                      >
+                        {category}
+                      </Link>
+                    </span>
+                  ))}
               </CardDescription>
             </CardHeader>
             {post.description && <CardContent>{post.description}</CardContent>}
-
           </Card>
         </article>
       ))}

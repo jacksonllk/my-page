@@ -32,13 +32,12 @@ export default function Intro() {
                 <CardContent>
                   <div className="flex flex-col">
                     <p className="max-w-[300px]">
-                      One day
-                      mid 2022, I decided to pick up programming and
-                      self-learn it with Udemy online courses and YouTube. I
-                      met many helpful peers through Twitter who helped me along
-                      the way. I launched my first web app in October 2023, and
-                      have been building and continuing to learn ever since.
-                      Feel free to reach out!
+                      One day mid 2022, I decided to pick up programming and
+                      self-learn it with Udemy online courses and YouTube. I met
+                      many helpful peers through Twitter who helped me along the
+                      way. I launched my first web app in October 2023, and have
+                      been building and continuing to learn ever since. Feel
+                      free to reach out!
                     </p>
                     <p className="pt-5 font-semibold">Building:</p>
                     <Link
