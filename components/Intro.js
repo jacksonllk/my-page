@@ -45,7 +45,7 @@ export default function Intro() {
               <div className="p-3 flex items-center justify-center">
                 <div className="flex flex-col">
                   <div className="relative max-w-[300px] h-auto rounded-md overflow-hidden">
-                    <img
+                    <Image
                       src="/images/profile-pic.jpg"
                       alt="Picture of the author"
                       // Use standard CSS for sizing and object-fit
