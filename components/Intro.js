@@ -27,15 +27,15 @@ export default function Intro() {
               <div>
                 <CardHeader>
                   <CardTitle>👋 Hi, I&apos;m Jackson</CardTitle>
-                  <CardDescription></CardDescription>
+                  <CardDescription>Indie Hacker, Guitar & Bass Enthusiast </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-col">
                     <p className="max-w-[300px]">
                       One day mid 2022, I decided to pick up programming and
-                      self-learn it with Udemy online courses and YouTube. I met
-                      many helpful peers through Twitter who helped me along the
-                      way. I launched my first web app in October 2023, and have
+                      self-learn it with Udemy courses and YouTube. I befriended
+                      several experienced programmers through Twitter who helped me along the
+                      way. I launched my first product in October 2023, and have
                       been building and continuing to learn ever since. Feel
                       free to reach out!
                     </p>
