@@ -50,7 +50,7 @@ export default function Intro() {
                       alt="Picture of the author"
                       // Use standard CSS for sizing and object-fit
                       className="object-cover" // Add appropriate CSS classes
-                      priority={true}
+                      priority="true"
                       width={300}
                       height={300}
                     />
