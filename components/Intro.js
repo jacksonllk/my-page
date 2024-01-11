@@ -19,7 +19,7 @@ import {
 
 export default function Intro() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mt-3">
       <div className="flex flex-row justify-between w-auto max-w-full">
         <div className="p-3">
           <Card className="w-full">
@@ -27,14 +27,14 @@ export default function Intro() {
               <div>
                 <CardHeader>
                   <CardTitle>👋 Hi, I&apos;m Jackson</CardTitle>
-                  <CardDescription>Indie Hacker, Guitar & Bass Enthusiast </CardDescription>
+                  <CardDescription>Indie Hacker, Guitar Enthusiast </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-col">
                     <p className="max-w-[300px]">
                       One day mid 2022, I decided to pick up programming and
                       self-learn it with Udemy courses and YouTube. I befriended
-                      several experienced programmers through Twitter who helped me along the
+                      other programmers through Twitter who helped me along the
                       way. I launched my first product in October 2023, and have
                       been building and continuing to learn ever since. Feel
                       free to reach out!
@@ -51,8 +51,8 @@ export default function Intro() {
                       // Use standard CSS for sizing and object-fit
                       className="object-cover" // Add appropriate CSS classes
                       priority="true"
-                      width={300}
-                      height={300}
+                      width={230}
+                      height={230}
                     />
                   </div>
                   <div className="flex flex-row items-center justify-end gap-x-2 mt-1">
