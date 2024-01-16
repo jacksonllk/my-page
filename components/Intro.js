@@ -36,7 +36,7 @@ export default function Intro() {
                       self-learn it with Udemy courses and YouTube. I befriended
                       other programmers through Twitter who helped me along the
                       way. I launched my first product in October 2023, and have
-                      been building and continuing to learn ever since. Feel
+                      been building and learning ever since. Feel
                       free to reach out!
                     </p>
                   </div>

@@ -12,7 +12,7 @@ export default function Page() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="bg-indigo-800 hover:bg-indigo-500 mb-3">🏗️ TenderPanel (Aggregation website)</Button>
+          <Button className="bg-indigo-800 hover:bg-indigo-500 mb-3">🏗️ TenderPanel</Button>
         </Link>
       </div>
       <div className="flex flex-col items-center mx-3">
@@ -24,7 +24,16 @@ export default function Page() {
         >
           <Button className="bg-emerald-700 hover:bg-emerald-500 mb-3">♻️ File Conversion GPT</Button>
         </Link>
+        <Link
+          href="https://chat.openai.com/g/g-eWtcggDxb-drinking-game"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="bg-pink-700 hover:bg-pink-500 mb-3">🍸 Drinking Game GPT</Button>
+        </Link>
       </div>
+
+      
     </div>
   );
 }
