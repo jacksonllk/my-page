@@ -7,9 +7,9 @@ import { faLinkedin, faSquareXTwitter, faGithub } from "@fortawesome/free-brands
 
 export default function Page() {
   return (
-    <div className="flex flex-col px-12 py-8 justify-center">
+    <div className="flex flex-col px-3 md:px-12 py-8 justify-center">
       <h1 className="font-semibold text-xl">👋 Hi, I&apos;m Jackson</h1>
-      <h2 className="font-semibold mb-3">Indie Hacker, Guitar Enthusiast </h2>
+      <h2 className="font-semibold mb-3 text-stone-400">Indie Hacker, Guitar Enthusiast </h2>
       <p>
         One day mid 2022, I decided to pick up programming and self-learn it with Udemy courses and
         YouTube. I befriended other programmers through Twitter who helped me along the way. I
@@ -34,7 +34,7 @@ export default function Page() {
         </div>
 
         <div className="">
-          <div className="flex flex-row m-5 justify-between">
+          <div className="flex flex-col md:flex-row m-5 justify-between">
             <p className="font-semibold mx-2">My Product: </p>
             <div className="flex flex-col items-end">
               <Link href="https://tenderpanel.com" target="_blank" rel="noopener noreferrer" className="hover:text-sky-600">
@@ -45,7 +45,7 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="flex flex-row m-5 justify-between">
+          <div className="flex flex-col md:flex-row m-5 justify-between">
             <p className="font-semibold mx-2">My GPTs: </p>
             <div className="flex flex-col items-end">
               <Link
@@ -66,7 +66,7 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="flex flex-row m-5 justify-between">
+          <div className="flex flex-col md:flex-row m-5 justify-between">
             <p className="font-semibold mx-2">Follow Me: </p>
             <div className="flex flex-row items-center justify-end gap-x-2 mt-1">
               <div className="icon-container">

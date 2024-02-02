@@ -7,7 +7,7 @@ import { faLinkedin, faSquareXTwitter, faGithub } from "@fortawesome/free-brands
 
 export default function Page() {
   return (
-    <div className="flex flex-col px-12 py-8 justify-center">
+    <div className="flex flex-col px-3 md:px-12 py-8 justify-center">
       <h1 className="font-semibold text-xl">👋 Hi Steve, I&apos;m Jackson Ling</h1>
       <h2 className="font-semibold text-stone-400 mb-3">
         Indie-hacker / ex-accountant / currently in construction, trading & property development{" "}
@@ -17,7 +17,7 @@ export default function Page() {
         mid 2022, based in Sarawak, Malaysia.
       </p>
       <p className="mb-3">
-        I initially learned with Udemy courses and YouTube with help from other programmers I knew
+        I learned with Udemy courses and YouTube with help from other programmers I knew
         through Twitter. I launched my first Saas product{" "}
         <Link
           href="https://tenderpanel.com"
@@ -65,7 +65,7 @@ export default function Page() {
         </div>
 
         <div className="">
-          <div className="flex flex-row m-5 justify-between">
+          <div className="flex flex-col md:flex-row m-5 justify-between">
             <p className="font-semibold mx-2">My Product: </p>
             <div className="flex flex-col items-end">
               <Link
@@ -86,7 +86,7 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="flex flex-row m-5 justify-between">
+          <div className="flex flex-col md:flex-row m-5 justify-between">
             <p className="font-semibold mx-2">My GPTs: </p>
             <div className="flex flex-col items-end">
               <Link
@@ -107,7 +107,7 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="flex flex-row m-5 justify-between">
+          <div className="flex flex-col md:flex-row m-5 justify-between">
             <p className="font-semibold mx-2">My Socials: </p>
             <div className="flex flex-row items-center justify-end gap-x-2 mt-1">
               <div className="icon-container">
