@@ -8,14 +8,45 @@ import { faLinkedin, faSquareXTwitter, faGithub } from "@fortawesome/free-brands
 export default function Page() {
   return (
     <div className="flex flex-col px-12 py-8 justify-center">
-      <h1 className="font-semibold text-xl">👋 Hi, I&apos;m Jackson</h1>
-      <h2 className="font-semibold mb-3">Indie Hacker, Guitar Enthusiast </h2>
-      <p>
-        One day mid 2022, I decided to pick up programming and self-learn it with Udemy courses and
-        YouTube. I befriended other programmers through Twitter who helped me along the way. I
-        launched my first product in October 2023, and have been building and learning ever since.
-        Feel free to reach out!
+      <h1 className="font-semibold text-xl">👋 Hi Steve, I&apos;m Jackson Ling</h1>
+      <h2 className="font-semibold text-stone-400 mb-3">
+        Indie-hacker / ex-accountant / currently in construction, trading & property development{" "}
+      </h2>
+      <p className="mb-3">
+        I hope this finds you well. A bit about myself, I am a self-taught web app developer since
+        mid 2022, based in Sarawak, Malaysia.
       </p>
+      <p className="mb-3">
+        I initially learned with Udemy courses and YouTube with help from other programmers I knew
+        through Twitter. I launched my first Saas product{" "}
+        <Link
+          href="https://tenderpanel.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-sky-600"
+        >
+          tenderpanel.com
+        </Link>{" "}
+        in October 2023 and currently working on a yet unnamed loan management platform for lenders
+        in Australia.
+      </p>
+      <p className="mb-3">
+        I mainly work with Next.js, Tailwind CSS, Python, MongoDB, and Supabase (with heavy assist
+        from GPT, Copilot and Stack Overflow)
+      </p>
+      <p className="mb-3">
+        <strong>I love programming.</strong> I would love to be able to make a living off it. Currently I seek to
+        improve my skills and gain more industry knowledge and experience. As I still have commitment to my
+        business, a remote role would be ideal. Long-term goal is to transition fully to the tech
+        industry.{" "}
+      </p>
+      <p className="mb-3 italic">
+        A personal note and thought: Jia Yi mentioned briefly about you being a self-taught
+        programmer as well and your involvement in heading a research centre in NUS besides doing
+        work for the government. I am impressed and certain that there is a lot I could learn from
+        you.
+      </p>
+
       <div className="flex flex-col md:flex-row justify-center my-3">
         <div className="p-3 flex justify-center items-center">
           <div className="flex flex-col">
@@ -37,10 +68,20 @@ export default function Page() {
           <div className="flex flex-row m-5 justify-between">
             <p className="font-semibold mx-2">My Product: </p>
             <div className="flex flex-col items-end">
-              <Link href="https://tenderpanel.com" target="_blank" rel="noopener noreferrer" className="hover:text-sky-600">
+              <Link
+                href="https://tenderpanel.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-sky-600"
+              >
                 🏗️ TenderPanel
               </Link>
-              <Link href="" target="_blank" rel="noopener noreferrer" className="hover:text-sky-600">
+              <Link
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-sky-600"
+              >
                 🪙 LMP (Work in progress)
               </Link>
             </div>
@@ -67,7 +108,7 @@ export default function Page() {
             </div>
           </div>
           <div className="flex flex-row m-5 justify-between">
-            <p className="font-semibold mx-2">Follow Me: </p>
+            <p className="font-semibold mx-2">My Socials: </p>
             <div className="flex flex-row items-center justify-end gap-x-2 mt-1">
               <div className="icon-container">
                 <Link
@@ -75,7 +116,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faSquareXTwitter} className="hover:text-sky-600"/>
+                  <FontAwesomeIcon icon={faSquareXTwitter} className="hover:text-sky-600" />
                 </Link>
               </div>
               <div className="icon-container">
@@ -84,7 +125,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faLinkedin} className="hover:text-sky-600"/>
+                  <FontAwesomeIcon icon={faLinkedin} className="hover:text-sky-600" />
                 </Link>
               </div>
               <div className="icon-container">
@@ -93,7 +134,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faGithub} className="hover:text-sky-600"/>
+                  <FontAwesomeIcon icon={faGithub} className="hover:text-sky-600" />
                 </Link>
               </div>
             </div>
