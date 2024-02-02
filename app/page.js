@@ -22,7 +22,7 @@ export default function Page() {
             <div className="rounded-md overflow-hidden">
               <img
                 src="/images/profile-pic.webp"
-                alt="Picture of the author"
+                alt="Profile Picture"
                 // Use standard CSS for sizing and object-fit
                 className="object-cover" // Add appropriate CSS classes
                 priority="true"
