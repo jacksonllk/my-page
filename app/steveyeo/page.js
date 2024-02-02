@@ -14,7 +14,7 @@ export default function Page() {
       </h2>
       <p className="mb-3">
         I hope this finds you well. A bit about myself, I am a self-taught web app developer since
-        mid 2022, based in Sarawak, Malaysia.
+        mid 2022, 38yo and based in Sarawak, Malaysia.
       </p>
       <p className="mb-3">
         I learned with Udemy courses and YouTube with help from other programmers I knew
@@ -36,8 +36,8 @@ export default function Page() {
       </p>
       <p className="mb-3">
         <strong>I love programming.</strong> I would love to be able to make a living off it. Currently I seek to
-        improve my skills and gain more industry knowledge and experience. As I still have commitment to my
-        business, a remote role would be ideal. Long-term goal is to transition fully to the tech
+        improve my skills and gain more industry experience and knowledge. As I still have commitment to my
+        business, a remote role would be ideal. My medium-term goal is to transition fully to the tech
         industry.{" "}
       </p>
       <p className="mb-3 italic">
@@ -76,14 +76,9 @@ export default function Page() {
               >
                 🏗️ TenderPanel
               </Link>
-              <Link
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-sky-600"
-              >
+              <p>
                 🪙 LMP (Work in progress)
-              </Link>
+              </p>
             </div>
           </div>
           <div className="flex flex-col md:flex-row m-5 justify-between">

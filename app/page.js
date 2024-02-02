@@ -37,12 +37,15 @@ export default function Page() {
           <div className="flex flex-col md:flex-row m-5 justify-between">
             <p className="font-semibold mx-2">My Product: </p>
             <div className="flex flex-col items-end">
-              <Link href="https://tenderpanel.com" target="_blank" rel="noopener noreferrer" className="hover:text-sky-600">
+              <Link
+                href="https://tenderpanel.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-sky-600"
+              >
                 🏗️ TenderPanel
               </Link>
-              <Link href="" target="_blank" rel="noopener noreferrer" className="hover:text-sky-600">
-                🪙 LMP (Work in progress)
-              </Link>
+              <p> 🪙 LMP (Work in progress)</p>
             </div>
           </div>
           <div className="flex flex-col md:flex-row m-5 justify-between">
@@ -75,7 +78,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faSquareXTwitter} className="hover:text-sky-600"/>
+                  <FontAwesomeIcon icon={faSquareXTwitter} className="hover:text-sky-600" />
                 </Link>
               </div>
               <div className="icon-container">
@@ -84,7 +87,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faLinkedin} className="hover:text-sky-600"/>
+                  <FontAwesomeIcon icon={faLinkedin} className="hover:text-sky-600" />
                 </Link>
               </div>
               <div className="icon-container">
@@ -93,7 +96,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faGithub} className="hover:text-sky-600"/>
+                  <FontAwesomeIcon icon={faGithub} className="hover:text-sky-600" />
                 </Link>
               </div>
             </div>
