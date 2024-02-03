@@ -8,9 +8,9 @@ import { faLinkedin, faSquareXTwitter, faGithub } from "@fortawesome/free-brands
 export default function Page() {
   return (
     <div className="flex flex-col px-3 md:px-12 py-8 justify-center">
-      <h1 className="font-semibold text-xl">👋 Hi, I&apos;m Jackson</h1>
-      <h2 className="font-semibold mb-3 text-stone-400">Indie Hacker, Guitar Enthusiast </h2>
-      <p>
+      <h1 className="font-semibold text-xl px-3">👋 Hi, I&apos;m Jackson</h1>
+      <h2 className="font-semibold px-3 mb-3 text-stone-400">Indie Hacker, Guitar Enthusiast </h2>
+      <p className="p-3">
         One day mid 2022, I decided to pick up programming and self-learn it with Udemy courses and
         YouTube. I befriended other programmers through Twitter who helped me along the way. I
         launched my first product in October 2023, and have been building and learning ever since.
